@@ -43,10 +43,6 @@ public class MainActivity extends AppCompatActivity {
                         ActivityCompat.requestPermissions(MainActivity.this,
                                 new String[]{Manifest.permission.CALL_PHONE},
                                 MY_PERMISSIONS_REQUEST_CALL_PHONE);
-
-                        // MY_PERMISSIONS_REQUEST_CALL_PHONE is an
-                        // app-defined int constant. The callback method gets the
-                        // result of the request.
                     }
 
                     String dial = "tel:" + phoneNo;
@@ -65,14 +61,15 @@ public class MainActivity extends AppCompatActivity {
         String phoneNo = tel.getText().toString();
 
         TextInputEditText tosms = findViewById(R.id.textSMS);
-        String toSms = "smsto:" + tosms.getText().toString();
+        String toSms = "smsto: " + phoneNo;
 
         String messageText = tosms.getText().toString();
         Intent sms = new Intent(Intent.ACTION_SENDTO, Uri.parse(toSms));
         sms.putExtra("sms_body", messageText);
         startActivity(sms);
-        SmsManager.getDefault().sendTextMessage(phoneNo, null,
-                messageText.toString(), null, null);
+        /*SmsManager.getDefault().sendTextMessage(phoneNo, null,
+                messageText.toString(), null, null);*/
+
 
     }
 }
