@@ -10,6 +10,11 @@
 ![Screenshot_20211126_114648_com example lab112](https://user-images.githubusercontent.com/90905407/143528557-1855fb8e-4d84-4d7f-be40-5d1dfcc75ee8.jpg)
 
 ##  **Добавление кода**
+- [X] Установить разрешение на доступ в файле «AndroidManifest.xml»
+```
+<uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+``` 
 
 - [X] Добавить обработчик кнопоки для отправки смс
 ```
@@ -61,11 +66,7 @@
 ```
 ![Screenshot_20211126_114657_com android incallui](https://user-images.githubusercontent.com/90905407/143528618-f46dfae5-7ee5-4dad-adc5-0ce1da89b05b.jpg)
 
-- [X] Установить разрешение на доступ в файле «AndroidManifest.xml»
-```
-<uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-``` 
+
 ***Все работает***
 
 [Информация по офрмлению README.md](https://github.com/GnuriaN/format-README.git)
